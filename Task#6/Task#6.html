@@ -1,0 +1,94 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+
+function Create_Array()
+{
+	Array_Of_Numbers = [];
+	for (let n = 0 ; n <= 100 ; n++)
+	{
+		Array_Of_Numbers[n] = n;
+	}
+	return Array_Of_Numbers;
+}
+
+function Print_Array(Array)
+{
+	for (let n = 0 ; n < Array.length ; n++)
+		{
+			console.log(Array[n]);
+		}
+}		
+
+function Shuffle_Array(Array)
+{
+    for (let i = Array.length - 1; i > 0; i--)
+	{
+          let j = Math.floor(Math.random() * (i + 1));
+          [Array[i], Array[j]] = [Array[j], Array[i]];
+	} 
+}
+
+function Divisible_By_Three()
+{
+	Array = Create_Array();
+	for (let n = 0 ; n < Array.length; n++)
+		{
+			if ( n % 3 == 0)
+				{
+					delete Array[n];
+				}	
+		}
+	Print_Array(Array);
+}
+
+function Add_Fifty_Nums()
+{
+	Array = Create_Array();
+	for ( let n = 100 ; n <= 150 ; n++)
+		{
+			Array[n] = n;
+		}
+	Print_Array(Array);	
+}	
+
+function Add_Three_To_Nums()
+{
+	Array = Create_Array();
+	for (let n = 0 ; n < Array.length ; n++)
+		{
+			Array [n] = Array [n] + 3;
+		}
+	Print_Array(Array);	
+}		
+
+function Twenty_To_Fourty()
+{
+	Array = Create_Array();
+	for (let n = 20 ; n <= 40 ; n++)
+	{
+		console.log(Array[n]);
+	}
+}
+
+function Reverse_Sort()
+{
+	Array = Create_Array();
+	Shuffle_Array(Array);
+	Print_Array(Array); 
+	Array.sort(function(a,b){ return b - a });
+	Print_Array(Array);
+}	
+	
+	
+
+</script>
+<button onclick = "Divisible_By_Three()">Button One</button>
+<button onclick = "Add_Fifty_Nums()">Button Two</button>
+<button onclick = "Add_Three_To_Nums()">Button Three</button>
+<button onclick = "Twenty_To_Fourty()">Button Four</button>
+<button onclick = "Reverse_Sort()">Button Five</button>
+</body>
+</html>

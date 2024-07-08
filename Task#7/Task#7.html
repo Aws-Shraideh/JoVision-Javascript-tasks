@@ -1,0 +1,16 @@
+<html>
+<body>
+<h1 id ="top"></h1>
+<script>
+
+setInterval(Current_Date, 1000);
+
+function Current_Date() 
+{
+	const Time = new Date();
+	document.getElementById("top").innerHTML = Time.toLocaleTimeString();
+}
+
+</script>
+</body>
+</html>

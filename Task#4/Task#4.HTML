@@ -1,0 +1,30 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+function Print_Array_Sum(Array)
+{
+	var Sum = 0;
+	for (let n = 0 ; n < Array.length; n++)
+	{
+		Sum = Sum + Array[n];
+	}
+	console.log(Sum);
+}
+
+
+function Create_Array()
+{
+	Array_Of_Numbers = [];
+	for (let n = 0 ; n <= 100 ; n++)
+	{
+		Array_Of_Numbers[n] = n;
+	}
+	Print_Array_Sum(Array_Of_Numbers);
+}
+
+</script>
+<button onclick = "Create_Array()">Click Me</button>
+</body>
+</html>

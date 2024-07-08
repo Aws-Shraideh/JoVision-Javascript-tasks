@@ -1,0 +1,33 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+function Print_Even_Array_Sum(Array)
+{
+	var Sum = 0;
+	for (let n = 0 ; n < Array.length; n++)
+	{
+		if (n % 2 == 0)
+		{
+			Sum = Sum + Array[n];
+		}	
+	}
+	console.log(Sum);
+}
+
+
+function Create_Array()
+{
+	Array_Of_Numbers = [];
+	for (let n = 0 ; n <= 100 ; n++)
+	{
+		Array_Of_Numbers[n] = n;
+	}
+	Print_Even_Array_Sum(Array_Of_Numbers);
+}
+
+</script>
+<button onclick = "Create_Array()">Button One</button>
+</body>
+</html>
