@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+<button id = "button" onclick = "Get_IP()"></button>
+<script>
+document.getElementById("button").innerHTML = "Get IP";
+async function Get_IP()
+{
+	try
+	{
+		let fetchRes = await fetch("https://api.ipify.org/");
+		console.log(fetchRes);
+		document.getElementById("button").innerHTML = fetchRes;
+	}
+	catch (err)
+	{
+		Error_Msg = err + ".";
+		window.alert(Error_Msg);
+	}
+}  
+
+</script>
+</body>
+</html>
