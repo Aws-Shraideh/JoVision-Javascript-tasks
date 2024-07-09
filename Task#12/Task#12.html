@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Task 12</title>
+</head>
+<body>
+<label for = "name">Name</label> 
+<input type = "text" id = "name"><br>
+
+<label for ="age">Age</label>
+<input type = "text" id = "age"><br><br>
+
+<button onclick="getValue(event)">Submit</button>
+<script>
+function getValue(event)
+{
+	person = new Object();
+	person.time = event.timeStamp;
+	person.name = document.getElementById("name").value;
+	person.age = document.getElementById("age").value;
+	if (isNaN(person.age))
+	{
+		window.alert("Please enter a valid age");
+	}
+	else 
+	{
+		alertMsg = "Name: " + person.name + "\nAge: " + person.age + "\nTimestamp: " + person.time;
+		window.alert(alertMsg);
+	}
+	
+	
+}
+</script>
+</body>
+</html>
