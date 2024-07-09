@@ -7,9 +7,9 @@
 function Get_IP()
 {
 	let fetchRes = fetch("https://api.ipify.org/");
-	fetchRes.then(data => 
+	fetchRes.then(response => 
 	{
-		console.log(data);
+		console.log(response);
 	})
 }  
 
