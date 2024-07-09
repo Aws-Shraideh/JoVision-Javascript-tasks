@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Task 13</title>
+</head>
+<body>
+<label for = "name">Name</label> 
+<input type = "text" id = "name"><br>
+
+<button id = "submit">Submit</button>
+<script>
+document.getElementById('submit').addEventListener('click', async () => {
+    const name = document.getElementById('name').value;
+
+    try {
+			const response = await fetch("https://api.agify.io/?name="+name);
+			const data = await response.json();
+
+			if (data.age)
+			{
+				const alertMsg = "Your name is: " + name + "\nYour age is: " + data.age;
+				alert(alertMsg);
+			} 
+			else 
+			{
+				alert('Age not found.');
+			}
+		} 
+		catch (error) 
+		{
+			window.alert(error);
+		}
+});
+
+</script>
+</body>
+</html>
